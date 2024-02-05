@@ -3,49 +3,53 @@
 @tailwind utilities;
 
 @layer base {
-    section {
-        @apply py-[75px]
-    }
+  section {
+    @apply py-[75px];
+  }
 }
 
 @layer components {
-    .container {
-        @apply max-w-full w-[1440px] px-5 mx-auto
-    }
+  .container {
+    @apply max-w-full w-[1440px] px-5 mx-auto;
+  }
 
-    .btn {
-        @apply bg-primaryColor py-4 px-9 rounded-[50px] text-white font-[600] mt-9
-    }
+  .btn {
+    @apply bg-primaryColor py-4 px-9 rounded-[50px] text-white font-[600] mt-9;
+  }
 
-    .heading {
-        @apply text-[44px] leading-[54px] font-[700] text-headingColor 
-    }
+  .heading {
+    @apply text-[44px] leading-[54px] font-[700] text-headingColor;
+  }
 
-    .text__paragraph{
-        @apply text-[18px] leading-8 font-[400] text-textColor mt-4
-    }
+  .text__paragraph {
+    @apply text-[18px] leading-8 font-[400] text-textColor mt-4;
+  }
 
-    .header {
-        @apply bg-[url('./assets/images/mask.png')] bg-no-repeat bg-center bg-cover w-full h-16
-    }
+  .header {
+    @apply bg-[url('./assets/images/mask.png')] bg-no-repeat bg-center bg-cover w-full h-16;
+  }
+
+  .home__banner {
+    @apply bg-[url('./assets/images/homeBg.png')] bg-no-repeat bg-center bg-cover;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-    .container {
-        @apply w-full
-    }
+  .container {
+    @apply w-full;
+  }
 
-    .section {
-        @apply py-9
-    }
+  .section {
+    @apply py-9;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    .heading {
-        @apply text-[26px] leading-[36px]
-    }
+  .heading {
+    @apply text-[26px] leading-[36px];
+  }
 
-    .text__paragraph{
-        @apply text-[16px] leading-7 mt-3
-    }
+  .text__paragraph {
+    @apply text-[16px] leading-7 mt-3;
+  }
 }
