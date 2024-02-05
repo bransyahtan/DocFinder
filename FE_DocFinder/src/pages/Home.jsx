@@ -67,6 +67,16 @@ export const Home = () => {
           </div>
         </div>
       </section>
+      {/* banner home end */}
+      <section className="">
+        <div className="container">
+          <div className="lg:w-[470px] mx-auto">
+            <h2 className="heading text-center">
+              Delivering top-tier medical care services
+            </h2>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
