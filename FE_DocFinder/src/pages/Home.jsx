@@ -1,12 +1,40 @@
 import heroImg1 from "../assets/images/hero-img01.png";
 import heroImg2 from "../assets/images/hero-img02.png";
 import heroImg3 from "../assets/images/hero-img03.png";
+import icon1 from "../assets/images/icon01.png";
+import icon2 from "../assets/images/icon02.png";
+import icon3 from "../assets/images/icon03.png";
+import { About } from "../components/about/About";
 
 export const Home = () => {
+  const services = [
+    {
+      href: "/doctors",
+      icon: icon1,
+      title: "Find a Doctor",
+      description:
+        "Explore our curated selection of healthcare professionals. Our directory streamlines the process of locating tailored medical expertise, prioritizing personalized care for your well-being.",
+    },
+    {
+      href: "/doctors",
+      icon: icon2,
+      title: "Find a Location",
+      description:
+        "Explore our diverse network of conveniently situated facilities, offering personalized care and accessibility tailored to your needs. Experience seamless healthcare journeys with us.",
+    },
+    {
+      href: "/doctors",
+      icon: icon3,
+      title: "Book Appointment",
+      description:
+        "Schedule your appointment effortlessly with us. Our user-friendly booking system provides prompt access to personalized care, ensuring your journey towards well-being is convenient and efficient.",
+    },
+  ];
+
   return (
     <>
       {/* banner home */}
-      <section className="home__banner pt-14 2xl:h-[800px]">
+      <section className="home__banner pt-14 2xl:h-[80%]">
         <div className="container">
           <div className="flex flex-col lg:flex-row gap-20 items-center justify-between">
             <div>
@@ -68,15 +96,45 @@ export const Home = () => {
         </div>
       </section>
       {/* banner home end */}
-      <section className="">
+      <section>
         <div className="container">
           <div className="lg:w-[470px] mx-auto">
             <h2 className="heading text-center">
               Delivering top-tier medical care services
             </h2>
+            <p className="text__paragraph text-center">
+              Delivering unparalleled, world-class healthcare accessible to all,
+              our health system offers unmatched expertise and care.
+            </p>
           </div>
+          {/* start card */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 mt-7 lg:mt-14">
+            {services.map((service, index) => (
+              <a
+                href={service.href}
+                key={index}
+                className="py-7 px-5 block cursor-pointer rounded-2xl shadow-panelShadow"
+              >
+                <div className="flex items-center justify-center">
+                  <img src={service.icon} alt="icon" />
+                </div>
+                <div className="mt-7">
+                  <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
+                    {service.title}
+                  </h2>
+                  <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
+                    {service.description}
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
+          {/* end card
+           */}
         </div>
       </section>
+
+      <About />
     </>
   );
 };
