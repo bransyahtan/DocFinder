@@ -1,5 +1,6 @@
 import aboutImg from "../../assets/images/about1.jpg";
 import aboutCard from "../../assets/images/about-card.png";
+import { Link } from "react-router-dom";
 
 export const About = () => {
   return (
@@ -35,7 +36,9 @@ export const About = () => {
               industries while setting new standards of excellence and
               leadership.
             </p>
-            <button className="btn">Learn More</button>
+            <Link to="/contact">
+              <button className="btn">Contact Us</button>
+            </Link>
           </div>
         </div>
       </div>
