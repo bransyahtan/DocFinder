@@ -15,8 +15,12 @@ export const DoctorCard = ({ doctor }) => {
   } = doctor;
   return (
     <div className="rounded-2xl shadow-2xl p-3 lg:p-5">
-      <div>
-        <img src={photo} alt="Doctor Image" className="w-full rounded-2xl" />
+      <div className="w-full h-[400px] relative overflow-hidden rounded-2xl p-3 lg:p-5">
+        <img
+          src={photo}
+          alt="Doctor Image"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
       </div>
       <h2
         className="text-[18px] leading-[30px] lg:text-[26px] lg:leading-9 text-headingColor font-[700] 

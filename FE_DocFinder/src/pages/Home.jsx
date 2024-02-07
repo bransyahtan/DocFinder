@@ -6,12 +6,15 @@ import icon2 from "../assets/images/icon22.gif";
 import icon3 from "../assets/images/icon33.gif";
 import featureImg from "../assets/images/feature.jpg";
 import videoIcon from "../assets/images/video-icon.png";
+import faqImg from "../assets/images/faqImg.jpg";
 import avatar from "../assets/images/avatar.jpg";
 import { About } from "../components/about/About";
 import { ServiceList } from "../components/services/ServiceList";
 import { Link } from "react-router-dom";
 import { BsChevronRight } from "react-icons/bs";
 import { DoctorList } from "../components/Doctors/DoctorList";
+import { FaqList } from "../components/Faq/FaqList";
+import { Testimonial } from "../components/testimonial/Testimonial";
 
 export const Home = () => {
   const services = [
@@ -170,7 +173,9 @@ export const Home = () => {
       </section>
       {/* services 1 end */}
 
+      {/* about */}
       <About />
+      {/* about end */}
 
       {/* services */}
       <section id="services">
@@ -290,6 +295,51 @@ export const Home = () => {
         </div>
       </section>
       {/* doctor end */}
+
+      {/* faq */}
+      <section>
+        <div className="container">
+          <div className="flex justify-between gap-[50px] lg:gap-0">
+            <div className="w-1/2 hidden md:block">
+              <img src={faqImg} alt="faq image" width="470px" height="675px" />
+            </div>
+
+            <div className="w-full md:w-1/2">
+              <h2 className="heading ">
+                Frequently Asked Questions by Our Valued Patients
+              </h2>
+              <p
+                className="my-4 text-justify text-textColor text-[16px] leading-6 lg:text-[18px] lg:leading-7 
+                font-[400] "
+              >
+                We understand that seeking clarity is crucial for your peace of
+                mind. Here are some common questions answered:
+              </p>
+              <FaqList />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* faq end */}
+
+      {/* testimonial */}
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center">
+              Hear What Our Patients Have to Say
+            </h2>
+            <p className="text__paragraph text-center">
+              Discover the testimonials from our satisfied patients who have
+              experienced personalized care and exceptional treatment from our
+              dedicated team of doctors. Their stories reflect our commitment to
+              your health and well-being.
+            </p>
+          </div>
+          <Testimonial />
+        </div>
+      </section>
+      {/* testimonial end*/}
     </>
   );
 };
