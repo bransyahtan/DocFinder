@@ -18,7 +18,7 @@ export const Doctors = () => {
               placeholder="Search Doctor"
             />
             <button className="btn mt-0 rounded-[0px] rounded-r-md">
-              Search
+              Search...
             </button>
           </div>
         </div>
