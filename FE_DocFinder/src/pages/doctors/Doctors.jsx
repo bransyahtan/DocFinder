@@ -1,5 +1,6 @@
 import { doctors } from "../../assets/data/doctors";
 import { DoctorCard } from "../../components/Doctors/DoctorCard";
+import { Testimonial } from "../../components/testimonial/Testimonial";
 
 export const Doctors = () => {
   return (
@@ -31,6 +32,23 @@ export const Doctors = () => {
               <DoctorCard key={doctor.id} doctor={doctor} />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center">
+              Hear What Our Patients Have to Say
+            </h2>
+            <p className="text__paragraph text-center">
+              Discover the testimonials from our satisfied patients who have
+              experienced personalized care and exceptional treatment from our
+              dedicated team of doctors. Their stories reflect our commitment to
+              your health and well-being.
+            </p>
+          </div>
+          <Testimonial />
         </div>
       </section>
     </>
