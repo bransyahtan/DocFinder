@@ -1,3 +1,7 @@
 export const DoctorFeedback = () => {
-  return <div>DoctorFeedback</div>;
+  return (
+    <div>
+      <p> Feedback </p>
+    </div>
+  );
 };
