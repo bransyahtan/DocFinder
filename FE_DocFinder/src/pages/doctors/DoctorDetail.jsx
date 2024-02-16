@@ -2,13 +2,15 @@ import { useState } from "react";
 import doctorImg from "../../assets/images/doctor3.png";
 // import doctorImg from "../../assets/images/faqImg.jpg";
 import starIcon from "../../assets/images/star.png";
+import { DoctorAbout } from "./DoctorAbout";
+import { DoctorFeedback } from "./DoctorFeedback";
 
 export const DoctorDetail = () => {
   const [tab, setTab] = useState("about");
 
   return (
     <section>
-      <div className="max-w-[1170px] px-5 mx-auto">
+      <div className="max-w-[1200px] px-5 mx-auto">
         <div className="grid md:grid-cols-3 gap-[50px]">
           <div className="md:col-span-2 ">
             <div className="flex items-center gap-5">
@@ -71,7 +73,10 @@ export const DoctorDetail = () => {
                 Feedback
               </button>
             </div>
-            <div className="mt-[50px]"></div>
+            <div className="mt-[50px]">
+              {tab === "about" && <DoctorAbout />}
+              {tab === "feedback" && <DoctorFeedback />}
+            </div>
           </div>
         </div>
       </div>
