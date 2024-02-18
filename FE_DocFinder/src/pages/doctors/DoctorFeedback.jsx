@@ -8,7 +8,6 @@ export const DoctorFeedback = () => {
             Dr. Ahn Hyeo-Seop
           </span>
         </h3>
-        {/*  */}
       </div>
     </div>
   );
