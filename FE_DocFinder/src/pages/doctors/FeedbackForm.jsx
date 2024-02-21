@@ -1,7 +1,7 @@
 export const FeedbackForm = () => {
   return (
     <div>
-      <p>feedback form</p>
+      <p>feedback Form</p>
     </div>
   );
 };
