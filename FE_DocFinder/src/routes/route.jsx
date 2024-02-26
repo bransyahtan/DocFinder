@@ -5,7 +5,7 @@ import {
   Home,
   Login,
   Services,
-  SignUp,
+  Register,
   Doctors,
   DoctorDetail,
 } from "../pages";
@@ -17,7 +17,7 @@ export const AppRouters = () => {
       <Route path="/doctors" element={<Doctors />} />
       <Route path="/doctors/:id" element={<DoctorDetail />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<SignUp />} />
+      <Route path="/register" element={<Register />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/services" element={<Services />} />
     </Routes>
