@@ -5,6 +5,7 @@ import bcrypt from "bcryptjs";
 
 export const register = async (req, res) => {
   const { email, password, name, role, photo, gender } = req.body;
+  //   const data = req.body;
   try {
     let user = null;
 
@@ -50,7 +51,7 @@ export const register = async (req, res) => {
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: "Internal Server Error",
+      message: "Error Creating User",
     });
   }
 };
