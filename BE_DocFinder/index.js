@@ -3,6 +3,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import authRouter from "./routes/authRoute.js";
 
 dotenv.config();
 
@@ -21,7 +22,10 @@ app.get("/", (req, res) => {
 mongoose.set("strictQuery", false);
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URL);
+    await mongoose.connect(process.env.MONGO_URL, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
     console.log("mongodb connected");
   } catch (error) {
     console.log("mongodb error: " + error);
@@ -32,8 +36,9 @@ const connectDB = async () => {
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors(corsOptions));
+app.use("/api/v1/auth", authRouter);
 
 app.listen(port, () => {
   connectDB();
-  console.log("Server running on port " + port);
+  console.log("Server Running on Port " + port);
 });
