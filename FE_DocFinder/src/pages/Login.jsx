@@ -23,7 +23,7 @@ export const Login = () => {
           <div className="mb-5">
             <input
               type="email"
-              placeholder="Enter Your Email"
+              placeholder="Enter Your Email."
               name="email"
               value={formData.email}
               onChange={handleInput}
@@ -36,7 +36,7 @@ export const Login = () => {
           <div className="mb-5">
             <input
               type="password"
-              placeholder="Enter Your password"
+              placeholder="Enter Your password."
               name="password"
               value={formData.password}
               onChange={handleInput}
