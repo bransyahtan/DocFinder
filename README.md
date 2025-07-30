@@ -1,4 +1,4 @@
-# DocFinder (Frontend)
+# DocFinder (Frontend Section)
 
 DocFinder is a web application for searching and booking doctors online. This project uses React and Vite for fast and modern frontend development.
 
