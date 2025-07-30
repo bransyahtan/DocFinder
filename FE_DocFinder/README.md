@@ -1,8 +1,45 @@
-# React + Vite
+# DocFinder (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+DocFinder is a web application for searching and booking doctors online. This project uses React and Vite for fast and modern frontend development.
 
-Currently, two official plugins are available :
+## Main Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Search for doctors by specialization
+- View doctor details and reviews
+- Book consultations online
+- FAQ, services, and contact pages
+
+## Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo>
+   cd FE_DocFinder
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+## Running the Application
+
+```bash
+npm run dev
+```
+
+The app will run at `http://localhost:5173` (or the port shown in your terminal).
+
+## Folder Structure
+
+- `src/components` — UI components
+- `src/pages` — Main application pages
+- `src/assets` — Images and static data
+- `src/layout` — Application layout
+- `src/routes` — Application routing
+- `src/utils` — Utility functions
+
+## Technology
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
